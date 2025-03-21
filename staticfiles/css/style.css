@@ -1,0 +1,173 @@
+/* Dark and Mysterious Theme */
+body {
+    background: url('/static/images/dark.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition:background 0.5s ease ease-in-out;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* smooth hover effects*/
+a{
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #b39ddb;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #ffcc00;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.contact-form {
+
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(5px);
+    }
+
+.contact-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+button {
+    background: #ff0000;
+    color: #0d0d0d;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: #15bd0f;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(201, 27, 192, 0.5);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+}
+
+button:active::before {
+    width: 0;
+    height: 0;
+    opacity: 1;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a img {
+    width: 40px;
+    filter: brightness(1000%) contrast(120%);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1500%) contrast(130%) drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9));
+}
